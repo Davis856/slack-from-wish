@@ -3,3 +3,9 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+
+.new-room{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -19,7 +19,8 @@ defmodule Slack.MixProject do
   def application do
     [
       mod: {Slack.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools],
+      start_phases: [tables: []]
     ]
   end
 
