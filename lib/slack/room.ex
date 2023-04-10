@@ -9,4 +9,9 @@ defmodule Slack.Room do
     :ets.insert(:rooms, room)
   end
 
+  def room_exists(id) do
+    IO.inspect(id)
+    :ets.lookup(:rooms, id)
+  end
+
 end

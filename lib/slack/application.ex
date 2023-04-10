@@ -11,6 +11,17 @@ defmodule Slack.Application do
     Enum.map(fn row ->
       :ets.new(elem(row, 0), elem(row, 1))
     end)
+
+    # TO MOVE THIS FROM HERE, ONLY FOR TESTING PURPOSES!
+    Slack.Room.insert_room(
+      {UUID.uuid4(), "The Room",
+       %{
+         :max_size => 20,
+         :current_size => 1,
+         :lifetime => 12,
+         :create_time => DateTime.utc_now()
+       }, ["Hello"]}
+    )
     :ok
   end
 

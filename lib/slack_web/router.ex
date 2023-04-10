@@ -19,6 +19,7 @@ defmodule SlackWeb.Router do
 
     get "/", PageController, :home
     live "/chat", RoomsLive
+    live "/chat/:id", RoomLive # I feel like this alias is not okay here but keep it for now
   end
 
   # Other scopes may use custom stacks.
